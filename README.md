@@ -24,7 +24,7 @@ Para instalar e configurar o projeto, siga os passos abaixo:
 
 1. **Clone o repositório**:
    ```bash
-   git clone https://github.com/DiegoDeSousaPereira/testStoom
+   git clone https://github.com/TiagoPintoDuarte/desafio-cypress-QA.git
    ```
 
 2. **Instale as dependências**:
