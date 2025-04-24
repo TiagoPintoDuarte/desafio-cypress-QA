@@ -10,7 +10,6 @@ Este projeto utiliza **Cypress** para testes automatizados de uma aplicação. E
 - [Scripts Disponíveis](#scripts-disponíveis)
 - [Relatórios de Testes](#relatórios-de-testes)
 - [Estrutura do Código](#estrutura-do-código)
-- [Integração Contínua (CI)](#integração-contínua-ci)
 
 ### 🛠 Tecnologias
 Este projeto utiliza as seguintes tecnologias:
@@ -70,7 +69,7 @@ Este projeto utiliza os recursos nativos do **Cypress** para organização e est
 
 - **Commands**: Localizados em `support/`, contém comandos customizados do Cypress para encapsular interações repetitivas ou complexas, como adicionar produtos ao carrinho, validar textos e finalizar compras.
 
-- **Env**: Variáveis de ambiente configuradas no `cypress.env.json` permitem o uso dinâmico de valores, como CPF válido e códigos de validação, garantindo flexibilidade nos testes.
+- **Env**: Variáveis de ambiente configuradas no `cypress.env.json` permitem o uso dinâmico de valores, como SENHA válida e códigos de validação, garantindo flexibilidade nos testes.
 
 - **Specs**: Localizadas na pasta `e2e/`, agrupam os testes em contextos, como cadastro, login, e fluxo de carrinho de compras. Cada spec foca em uma área específica da aplicação, com organização clara para facilitar a leitura e manutenção.
 
@@ -81,19 +80,6 @@ Este projeto utiliza os recursos nativos do **Cypress** para organização e est
 
 Essa abordagem mantém o projeto modular e facilita sua escalabilidade, melhorando a eficiência na automação de testes. 🚀
 
-### 🔄 Integração Contínua (CI)
-
-Este projeto utiliza **GitHub Actions** para automação da pipeline de testes. A configuração no arquivo `github/workflows/cypress-tests.yml` permite que os testes Cypress sejam executados em cada push na branch `master`, ao abrir um merge request ou diariamente às 09:00.
-
-**Pipeline de Testes Cypress**:
-- **Imagem Docker**: Utiliza a imagem `cypress/base:18.16.0`, pré-configurada com Cypress e Node 18.
-- **Estágios**: Definido para rodar no estágio `test`.
-- **Scripts**:
-  - Instalação de dependências com `npm install`.
-  - Execução dos testes Cypress em modo headless com `npx cypress run`.
-- **Artifacts**: Após a execução, os relatórios de testes, vídeos e screenshots são salvos e mantidos por 1 semana.
-- **Notificação de Erro**: Caso o job falhe, uma notificação é enviada ao Slack com detalhes do commit e link para o job, usando a URL configurada para o webhook.
----
 
 ### Agradecimentos 🙏
-Obrigado por conferir este projeto! Estou sempre em busca de melhorar e aplicar boas práticas em automação de testes. Além disso, possuo certificações CTFL(Certified Tester Foundation Level) e CT-TAE(Certified Tester - Test Automation Engineer), que validam meu compromisso com a qualidade e a eficácia em testes de software.
+Obrigado por conferir este projeto! Estou sempre em busca de melhorar e aplicar boas práticas em automação de testes. Estou em busca de me tornar um Qa expecializado em automação, com foco e retirar minha CTFL e futuramente a CTAL-TAE.
